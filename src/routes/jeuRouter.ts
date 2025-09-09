@@ -106,6 +106,29 @@ export class JeuRouter {
     }
   }
 
+
+  public joueur(req: Request, res: Response, next: NextFunction) {
+    const joueurs = this._controleurJeu.joueurs
+
+    res.status(200)
+        .send({
+            joueurs: joueurs
+        })
+
+  }
+
+  public redemarerJeu(req: Request, res: Response, next: NextFunction) {
+
+    this._controleurJeu.redemarer()
+    req.flash("info","Application redémarre")
+    res.status(200)
+        .send({
+            message: 'Success',
+            status: res.status
+        })
+
+  }
+
   /**
      * Take each handler, and attach to one of the Express.Router's
      * endpoints.
@@ -114,6 +137,8 @@ export class JeuRouter {
     this._router.post('/demarrerJeu', this.demarrerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
     this._router.get('/jouer/:nom', this.jouer.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
     this._router.get('/terminerJeu/:nom', this.terminerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
+    this._router.get('/redemarrerJeu',this.redemarerJeu.bind(this))
+    this._router.get('/joueur',this.joueur.bind(this))
   }
 
 }
