@@ -4,6 +4,7 @@ import logger from 'morgan';
 import flash from 'express-flash-plus';
 
 import { jeuRoutes } from './routes/jeuRouter';
+import { Joueur } from './core/joueur';
 
 // Creates and configures an ExpressJS web server.
 class App {
@@ -39,10 +40,10 @@ class App {
     const titreBase = 'Jeu de dés';
     let router = express.Router();
     // Le squelette ne traite pas la gestion des connexions d'utilisateur, mais
-    // les gabarits Pug (navbar) supportent l'affichage selon l'état de connexion 
+    // les gabarits Pug (navbar) supportent l'affichage selon l'état de connexion
     // dans l'objet user, qui peut avoir deux valeurs (p.ex. admin ou normal)
     let user;
-    // Si l'utilisateur est connecté, le gabarit Pug peut afficher des options, 
+    // Si l'utilisateur est connecté, le gabarit Pug peut afficher des options,
     // le nom de l'utilisateur et une option pour se déconnecter.
     user = { nom: 'Pierre Trudeau', hasPrivileges: true, isAnonymous: false };
     // Si user.isAnonymous est vrai, le gabarit Pug affiche une option pour se connecter.
@@ -59,6 +60,9 @@ class App {
         });
     });
 
+
+
+   // const joueursAvecRatio = joueurs.map(j => ({...j, ratio: j.lancersGagnes / j.lancers}))
     // Route pour classement (stats)
     router.get('/stats', (req, res, next) => {
       res.render('stats',
@@ -67,7 +71,10 @@ class App {
           title: `${titreBase}`,
           user: user,
           // créer nouveau tableau de joueurs qui est trié par ratio
-          joueurs: JSON.parse(jeuRoutes.controleurJeu.joueurs)
+          joueurs: (JSON.parse(jeuRoutes.controleurJeu.joueurs) as Array<Joueur>).map(
+
+              j => ({...j, ratio: j.lancersGagnes/j.lancers}))
+
         });
     });
 
