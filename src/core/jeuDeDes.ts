@@ -42,7 +42,7 @@ export class JeuDeDes {
         }
         const somme = this.brasser()
         joueur.lancer();
-        const gagne = somme === 7;
+        const gagne = somme <= 10;
         if (gagne) joueur.gagner();
         const resultat = {
             nom: nom,
@@ -71,7 +71,7 @@ export class JeuDeDes {
         return JSON.stringify(resultat);
     }
 
-    public redemarer() {
+    public redemarrerJeu() {
         this._joueurs.clear()
 
     }

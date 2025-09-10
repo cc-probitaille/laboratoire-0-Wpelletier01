@@ -13,8 +13,9 @@ describe('GET /api/v1/jeu/redemarrerJeu', () => {
       await request.post("/api/v1/jeu/demarrerJeu").send({nom: "George"});
     })
 
+
     it("RedémarerJeu avec Succès", async () => {
-      const response = await request.get("/api/v1/jeu/redemarrerJeu")
+      const response = await request.get('/api/v1/jeu/redemarrerJeu')
       expect(response.status).toBe(200)
     });
 
@@ -25,6 +26,9 @@ describe('GET /api/v1/jeu/redemarrerJeu', () => {
       const response2 = await request.get("/api/v1/jeu/joueur")
       const joueur : Joueur[] = JSON.parse(response2.body.joueurs)
       expect(joueur.length).toBe(0)
+
+      expect((await request.get("/api/v1/jeu/jouer/Bob")).status).toBe(404)
+
     });
 
 
