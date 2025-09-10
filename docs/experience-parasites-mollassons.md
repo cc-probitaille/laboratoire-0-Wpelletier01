@@ -14,3 +14,12 @@ Plus tard dans le semestre, **si votre équipe porte un manque de performance à
 Mettez votre réponse (environ 300 mots) ci-dessous:
 
 ---
+Dans un projet d'équipe au cégep, nous devions mettre en place une infrastructure réseautique pour une compagnie fictive. Comme la tâche était assez longue, les équipes étaient grandes (environ 10 personnes). Nous avons vite compris que plus une équipe est nombreuse, plus la gestion devient complexe. On souhaitait permettre à tout le monde de participer également, mais cela devient difficile à réaliser. 
+
+Chaque personne a ses propres préoccupations extérieures (dans un environnement académique), qu’elle peut utiliser pour justifier des attentes moins élevées que celles des autres. Dans ces situations, il est difficile de trouver un niveau d’empathie raisonnable envers quelqu’un, sans lui permettre de profiter indûment du travail de l’équipe.
+
+Nous nous fixions des dates pour nous assurer que notre travail soit remis à temps. Je me suis rendu compte que certains, qui semblaient clairement être un parasites au départ, respectaient quand même le calendrier. Par contre, il arrivait que certains mollassons n’arrivent pas à finir leur partie à temps. C’était difficile pour nous de déterminer si c’était un manque d’effort ou de compétence.
+
+Ainsi, il nous était difficile de prendre des mesures concrètes contre ces personnes, par gentillesse mais aussi par manque de ressources. Les parasites ont fini par comprendre qu’il n’y avait pas de conséquences à remettre leur travail en retard. Alors eux aussi ont commencé à être très laxistes dans leurs remises. On se retrouvait donc avec quelques coéquipiers qui devaient compenser les retards des mollassons et des parasites.
+
+En repensant à ce projet, on se rend compte qu’il est crucial d’être bien organisé : il faut bien répartir le travail selon les forces et faiblesses de chacun. Mais surtout, il faut intervenir le plus tôt possible lorsqu’un membre commence à poser problème, que ce soit un mollasson ou un parasite, car sinon le problème devient de plus en plus difficile à régler.
